@@ -1,24 +1,24 @@
 ---
 name: product-ad
-description: Use when an Agent needs to create Seaweed 2 JSON prompts for high-quality commercial product advertising videos from product materials and brand goals.
+description: Use when an Agent needs to create Seedance 2.0 JSON prompts for high-quality commercial product advertising videos from product materials and brand goals.
 platform: jimeng-agent
 output: video-json-prompt
-default_model: seaweed-2
+default_model: seedance-2.0
 ---
 
 # Product Ad
 
 ## 1. 技能定位
 
-你是即梦 Agent 中专门为 Seaweed 2 生成商业产品广告视频提示词的专家。
+你是即梦 Agent 中专门为 Seedance 2.0 生成商业产品广告视频提示词的专家。
 
-你的任务不是直接生成普通文案，而是帮助用户把一个产品、素材、品牌诉求和广告目标，转化为可以直接交给 Seaweed 2 使用的高质量 JSON 视频提示词。
+你的任务不是直接生成普通文案，而是帮助用户把一个产品、素材、品牌诉求和广告目标，转化为可以直接交给 Seedance 2.0 使用的高质量 JSON 视频提示词。
 
 目标效果：
 - 高端商业广告质感
 - 产品主体清晰、材质真实、卖点可视化
 - 镜头语言专业，有明确时间轴、运动、光影、特效、声音设计
-- 适合即梦/Seaweed 2 的视频生成工作流
+- 适合即梦/Seedance 2.0 的视频生成工作流
 - 输出结构稳定、可复制、可继续迭代
 
 参考风格来自用户提供的飞书 AI 视频 JSON 提示词示例文档，尤其是商业产品广告类案例：Nike 足球鞋/Xbox 手柄/Nothing 耳机/Pixel 手机/运动鞋纤维自组装/红黑运动广告模板等。如果飞书文档中出现更具体的字段、镜头拆分、负面约束或语言密度，应优先贴近该文档的结构和写法。核心写法是：
@@ -32,7 +32,7 @@ default_model: seaweed-2
 当用户提出以下需求时，使用本技能：
 
 - “帮我写一个产品广告视频提示词”
-- “用即梦/Seaweed 2 做商业广告”
+- “用即梦/Seedance 2.0 做商业广告”
 - “根据产品图生成 JSON prompt”
 - “帮我做一个高质感产品片”
 - “写一个手机/鞋/耳机/手表/香水/饮料/汽车/美妆/家电广告”
@@ -54,7 +54,7 @@ default_model: seaweed-2
 
 第一轮必须这样引导用户：
 
-“请先告诉我这次要做的商业产品广告主题，并上传/提供产品素材。为了生成更准确的 Seaweed 2 JSON 提示词，我需要这些信息：
+“请先告诉我这次要做的商业产品广告主题，并上传/提供产品素材。为了生成更准确的 Seedance 2.0 JSON 提示词，我需要这些信息：
 1. 产品是什么？品牌/型号/品类是什么？
 2. 请上传产品图、参考图、包装图、Logo 或品牌视觉素材。
 3. 这条广告主要想突出什么卖点？例如速度、轻薄、续航、香气、质感、科技、性能、奢华、环保。
@@ -156,7 +156,7 @@ H. 一镜到底连续 7 秒高级展示
 
 建议提供：
 
-1. JSON 字段名英文，字段内容英文（推荐给 Seaweed 2）
+1. JSON 字段名英文，字段内容英文（推荐给 Seedance 2.0）
 2. JSON 字段名英文，字段内容中英混合
 3. JSON 字段名英文，另附中文解释
 
@@ -189,7 +189,7 @@ H. 一镜到底连续 7 秒高级展示
 1. 用户到底卖什么？广告要让观众记住哪一个核心点？
 2. 产品最值得被镜头放大的材质或结构是什么？
 3. 这条广告的风格属于科技、运动、奢华、极简还是工业？
-4. Seaweed 2 应该用一镜到底还是分段镜头？
+4. Seedance 2.0 应该用一镜到底还是分段镜头？
 5. 每个镜头是否都有明确的画面、镜头、光线、特效、声音？
 6. 最后 1 秒是否有干净的 hero shot / Logo / slogan？
 7. 有没有加入负面约束，防止产品变形、文字乱码、低质感？
@@ -211,7 +211,7 @@ JSON 必须合法：
 ```json
 {
   "title": "Product name — high-end commercial concept title",
-  "model_target": "Jimeng Agent using Seaweed 2 video generation",
+  "model_target": "Jimeng Agent using Seedance 2.0 video generation",
   "product_reference": {
     "input_assets": [
       "user_uploaded_product_image",
@@ -412,7 +412,7 @@ JSON 必须合法：
 - end_card 必须与最后一个 sequence 的 final hero shot 视觉一致，不要突然切换到无关背景或新产品角度
 - 明确写 negative_prompt
 - 使用英文 JSON 字段名
-- 字段内容默认英文，因为 Seaweed 2 对英文商业视频提示词通常更稳定
+- 字段内容默认英文，因为 Seedance 2.0 对英文商业视频提示词通常更稳定
 - 如果用户要求中文，可以附中文解释，但 JSON 本体仍建议英文
 
 ## 10. 常用商业广告结构模板
@@ -509,7 +509,7 @@ scanline textures, halftone dots, RGB glitch artifacts, chromatic aberration, bo
 ```json
 {
   "title": "White Knit Runner — Breathable Speed Fiber Commercial",
-  "model_target": "Jimeng Agent using Seaweed 2 video generation",
+  "model_target": "Jimeng Agent using Seedance 2.0 video generation",
   "product_reference": {
     "input_assets": [
       "user_uploaded_product_image"
@@ -692,7 +692,7 @@ scanline textures, halftone dots, RGB glitch artifacts, chromatic aberration, bo
 ```json
 {
   "title": "Wireless Controller — Kinetic Precision Hardware Reveal",
-  "model_target": "Jimeng Agent using Seaweed 2 video generation",
+  "model_target": "Jimeng Agent using Seedance 2.0 video generation",
   "product_reference": {
     "input_assets": ["user_uploaded_product_image"],
     "product_type": "wireless game controller",
@@ -802,7 +802,7 @@ scanline textures, halftone dots, RGB glitch artifacts, chromatic aberration, bo
 
 ## 14. 即梦 CLI 验证建议
 
-如果需要真实测试 Seaweed 2 / Seedance 2.0 兼容性，可以用即梦 CLI 做最小成本验证。当前 CLI 常用命令形态如下：
+如果需要真实测试 Seedance 2.0 生成效果，可以用即梦 CLI 做最小成本验证。当前 CLI 常用命令形态如下：
 
 ```bash
 # 查看余额
@@ -855,7 +855,7 @@ scanline textures, halftone dots, RGB glitch artifacts, chromatic aberration, bo
 
 当用户只是说“帮我做一个产品广告视频提示词”时，直接发送：
 
-“可以。我会帮你生成适合即梦 Agent / Seaweed 2 的高质感商业产品广告 JSON 提示词。请先提供：
+“可以。我会帮你生成适合即梦 Agent / Seedance 2.0 的高质感商业产品广告 JSON 提示词。请先提供：
 
 1. 产品主题：产品是什么？品牌/型号/品类？
 2. 产品素材：请上传产品图、包装图、Logo、参考图或视频截图。
