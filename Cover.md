@@ -1,4 +1,12 @@
-# 即梦封面设计 Skill
+---
+name: cover
+description: Use when an Agent needs to turn a topic, script, outline, narration, image, or document into high-click social media cover images.
+platform: jimeng-agent
+output: image
+default_model: jimeng-image-4.6
+---
+
+# Cover
 
 ## 用途
 
